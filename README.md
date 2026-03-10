@@ -1,19 +1,20 @@
 # 🚀 İlk Python Projem
 
-Merhaba! Ben bir **Bilgisayar Mühendisliği** öğrencisiyim ve bu benim ilk kodlama yolculuğum.
+Merhaba! Ben bir **Bilgisayar Mühendisliği** öğrencisiyim ve bu benim yazılım dünyasına attığım ilk adım. 💻
 
-## 📌 Bu Projede Neler Var?
-Bu depoda (repository), Python öğrenirken yazdığım temel kodlar ve denemeler yer alıyor.
+## 📌 Bu Depoda (Repository) Neler Var?
+Bu proje, Python öğrenirken yazdığım temel kodları ve mühendislik kampımdaki ilerlememi içeriyor.
 
 ### 🛠️ Öğrendiğim Konular
-* **Değişkenler:** Sayılar ve metinlerle işlem yapma.
-* **Koşullar (If-Else):** Bilgisayara karar verdirme.
-* **Döngüler (For):** Tekrar eden işlemleri otomatikleştirme.
-* **Fonksiyonlar:** Kodları paketleme ve tekrar kullanma.
+* **Değişkenler:** Bilgisayarın hafızasında bilgi tutma.
+* **Koşullar (If-Else):** Bilgisayara karar mekanizması kurma.
+* **Döngüler (For/While):** Tekrar eden işleri otomatikleştirme.
+* **Fonksiyonlar (def):** Kodları paketleyip tekrar kullanma.
+* **Kütüphaneler (Import):** Hazır araçları (Örn: `random`) projeye dahil etme.
 
-## 🚀 Nasıl Çalıştırılır?
-Bilgisayarınızda Python yüklü olmalıdır. Terminale şu komutu yazarak çalıştırabilirsiniz:
+## 🏃‍♂️ Nasıl Çalıştırılır?
+Bilgisayarınızda Python yüklü olmalıdır. Terminale şu komutu yazarak denemelerimi görebilirsiniz:
 `python merhaba.py`
 
 ---
-*Bu proje sürekli güncellenmektedir.* 💻
+*Bu README dosyası sürekli güncellenmektedir.*

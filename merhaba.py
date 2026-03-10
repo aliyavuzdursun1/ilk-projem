@@ -1,16 +1,29 @@
+# Başkasının yazdığı 'random' (rastgelelik) paketini içeri çağırıyoruz
+import random
 
-# 1. MAKİNEYİ KURUYORUZ (Tanımlama)
-def selam_ver():
-    print("Merhaba Aliya!")
-    print("Bugün Python öğreniyorsun.")
+def oyun_baslat():
+    # Bilgisayar 1 ile 20 arasında gizli bir sayı tutsun
+    gizli_sayi = random.randint(1, 20)
+    tahmin_hakki = 3
+    
+    print("🤖: 1 ile 20 arasında bir sayı tuttum. 3 hakkın var!")
 
-# 2. DÜĞMEYE BASIYORUZ (Çalıştırma)
-selam_ver()
-selam_ver()
-def toplama_yap(a, b):
-    sonuc = a + b
-    return sonuc  # Sonucu elimize teslim etti
+    while tahmin_hakki > 0:
+        tahmin = int(input("Tahminin nedir?: "))
+        
+        if tahmin == gizli_sayi:
+            print("🎉 Tebrikler! Bilgisayar mühendisi zekasıyla doğru bildin!")
+            break
+        elif tahmin < gizli_sayi:
+            print("🔼 Daha büyük bir sayı dene.")
+        else:
+            print("🔽 Daha küçük bir sayı dene.")
+            
+        tahmin_hakki -= 1
+        print("Kalan hakkın: " + str(tahmin_hakki))
 
-# Şimdi o sonucu alıp ekrana yazdıralım
-hesap = toplama_yap(10, 20)
-print(hesap)
+    if tahmin_hakki == 0:
+        print("💀 Maalesef hakkın bitti. Sayı şuydu: " + str(gizli_sayi))
+
+# Oyunu çalıştıralım
+oyun_baslat()
