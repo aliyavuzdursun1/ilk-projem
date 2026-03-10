@@ -1,29 +1,22 @@
-# Başkasının yazdığı 'random' (rastgelelik) paketini içeri çağırıyoruz
-import random
+import requests
 
-def oyun_baslat():
-    # Bilgisayar 1 ile 20 arasında gizli bir sayı tutsun
-    gizli_sayi = random.randint(1, 20)
-    tahmin_hakki = 3
+def kur_getir():
+    print("🌐 Merkez Bankası verilerine bağlanılıyor...")
     
-    print("🤖: 1 ile 20 arasında bir sayı tuttum. 3 hakkın var!")
-
-    while tahmin_hakki > 0:
-        tahmin = int(input("Tahminin nedir?: "))
+    # Döviz kurlarını veren ücretsiz bir adrese gidiyoruz
+    url = "https://api.exchangerate-api.com/v4/latest/USD"
+    
+    try:
+        cevap = requests.get(url)
+        veriler = cevap.json() # Gelen karmaşık yazıyı Python'ın anlayacağı sözlüğe çeviriyoruz
         
-        if tahmin == gizli_sayi:
-            print("🎉 Tebrikler! Bilgisayar mühendisi zekasıyla doğru bildin!")
-            break
-        elif tahmin < gizli_sayi:
-            print("🔼 Daha büyük bir sayı dene.")
-        else:
-            print("🔽 Daha küçük bir sayı dene.")
-            
-        tahmin_hakki -= 1
-        print("Kalan hakkın: " + str(tahmin_hakki))
+        dolar_tl = veriler["rates"]["TRY"]
+        
+        print("---------------------------")
+        print("💵 1 ABD Doları = " + str(dolar_tl) + " TL")
+        print("---------------------------")
+        
+    except:
+        print("❌ İnternet bağlantısı kurulamadı veya bir hata oluştu.")
 
-    if tahmin_hakki == 0:
-        print("💀 Maalesef hakkın bitti. Sayı şuydu: " + str(gizli_sayi))
-
-# Oyunu çalıştıralım
-oyun_baslat()
+kur_getir()
